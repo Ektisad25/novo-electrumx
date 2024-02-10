@@ -71,7 +71,7 @@ class Coin:
     RPC_PORT = 8665
     GENESIS_HASH = ('0000000000b3de1ef5bd7c20708dbafc'
                     '3df0441877fa4a59cda22b4c2d4f39ce')
-    GENESIS_ACTIVATION = 100_000_000
+    GENESIS_ACTIVATION = 0
     # Peer discovery
     PEER_DEFAULT_PORTS = {'t': '50001', 's': '50002'}
     PEERS = []
@@ -212,10 +212,6 @@ class BitcoinSV(Coin):
     TX_COUNT_HEIGHT = 557037
     TX_PER_BLOCK = 400
     PEERS = [
-        'electrumx.bitcoinsv.io s',
-        'satoshi.vision.cash s',
-        'sv.usebsv.com s t',
-        'sv.satoshi.io s t',
     ]
     GENESIS_ACTIVATION = 620_538
 
@@ -240,7 +236,6 @@ class BitcoinSVTestnet(BitcoinTestnetMixin, Coin):
     '''Bitcoin Testnet for Bitcoin SV daemons.'''
     NAME = "BitcoinSV"
     PEERS = [
-        'electrontest.cascharia.com t51001 s51002',
     ]
     GENESIS_ACTIVATION = 1_344_302
 
@@ -248,7 +243,6 @@ class BitcoinSVTestnet(BitcoinTestnetMixin, Coin):
 class BitcoinSVScalingTestnet(BitcoinSVTestnet):
     NET = "scalingtest"
     PEERS = [
-        'stn-server.electrumsv.io t51001 s51002',
     ]
     TX_COUNT = 2015
     TX_COUNT_HEIGHT = 5711
