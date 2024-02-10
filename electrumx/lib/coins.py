@@ -55,7 +55,7 @@ class CoinError(Exception):
 class Coin:
     '''Base class of coin hierarchy.'''
 
-    SHORTNAME = "BSV"
+    SHORTNAME = "NOVO"
     NET = "mainnet"
     REORG_LIMIT = 200
     # Not sure if these are coin-specific
@@ -110,7 +110,7 @@ class Coin:
 
     @classmethod
     def max_fetch_blocks(cls, height):
-        if height < 130000:
+        if height < 930000:
             return 1000
         return 100
 
@@ -196,11 +196,11 @@ class Coin:
 
 class Novo(Coin):
     NAME = "Novo"
-    TX_COUNT = 1000
-    TX_COUNT_HEIGHT = 2000
+    TX_COUNT = 10000
+    TX_COUNT_HEIGHT = 2000000
     TX_PER_BLOCK = 10
-    CHAIN_SIZE = 1_623_944_264_227
-    CHAIN_SIZE_HEIGHT = 709_728
+    CHAIN_SIZE = 1_623_944_264_227_000
+    CHAIN_SIZE_HEIGHT = 709_728_000
     AVG_BLOCK_SIZE = 150_000_000
     PEERS = [
     ]
